@@ -1,7 +1,7 @@
-### TrendingMovies
+# TrendingMovies
 This sample mvvm app uses some jetpack tools to display a list of trending movies to the user utilizing The Movie DataBase API
 
-#version 1.0
+### version 1.0
 
 Retrofit for network calls
 
@@ -17,5 +17,5 @@ Room for local data source
 
 
 
-##Upcoming changes
+## Upcoming changes
 adding user account support

@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.trendingmovies.R
-import com.example.trendingmovies.model.Genres
 import com.example.trendingmovies.model.Movie
 import com.example.trendingmovies.utils.Constants
 import com.example.trendingmovies.utils.GenreMap

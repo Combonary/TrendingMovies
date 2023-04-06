@@ -13,6 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MoviesListViewModel @Inject constructor(private val movieRepo: MovieRepo) : ViewModel() {
+
     private val TAG = MoviesListViewModel::class.java.simpleName
     private val _movieList = MutableLiveData<ServerResult<TrendingMovies>>()
     val movieList = _movieList
@@ -24,7 +25,7 @@ class MoviesListViewModel @Inject constructor(private val movieRepo: MovieRepo) 
     private fun fetchMovies() {
         Log.d(TAG, "view model call to get list of movies")
         viewModelScope.launch {
-            movieRepo.getTrendingMovies().collect{
+            movieRepo.getTrendingMovies().collect {
                 _movieList.value = it
             }
         }

@@ -43,7 +43,7 @@ class MovieRepo @Inject constructor(
                 result.data?.results?.let { it ->
                     Log.d(TAG, "result received")
                     Log.d(TAG, result.data.results.toString())
-                    movieDao.deleteAll(it)
+                    movieDao.updateAll(it)
                     movieDao.insertAll(it)
                 }
             }

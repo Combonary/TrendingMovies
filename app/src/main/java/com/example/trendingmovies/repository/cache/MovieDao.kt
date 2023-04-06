@@ -16,4 +16,7 @@ interface MovieDao {
 
     @Delete
     fun deleteAll(movies: List<Movie>)
+
+    @Update
+    fun updateAll(movies: List<Movie>)
 }

@@ -5,7 +5,7 @@ import okhttp3.Request
 import okhttp3.Response
 
 /**
- * add api key to request
+ * add api key to requesta
  */
 class AuthInterceptor(private val apiKey: String): Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {

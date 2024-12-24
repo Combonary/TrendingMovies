@@ -18,7 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MoviesListActivity : AppCompatActivity() {
-    private val TAG: String = MoviesListActivity::class.java.simpleName
+    private val tag: String = MoviesListActivity::class.java.simpleName
 
     private val list = ArrayList<Movie>()
     private val listViewModel by viewModels<MoviesListViewModel>()
@@ -45,7 +45,7 @@ class MoviesListActivity : AppCompatActivity() {
         binding.movieListRecyclerView.adapter = movieListAdapter
 
         initUi()
-        Log.d(TAG, list.toString())
+        Log.d(tag, list.toString())
     }
 
     private fun initUi(){
@@ -59,7 +59,7 @@ class MoviesListActivity : AppCompatActivity() {
 
                 ServerResult.Status.SUCCESS -> {
                     result.data?.results?.let { updatedList ->
-                        Log.d(TAG, updatedList.toString())
+                        Log.d(tag, updatedList.toString())
                         movieListAdapter.updateData(updatedList)
                     }
                     binding.movieListProgressBar.visibility = View.GONE
